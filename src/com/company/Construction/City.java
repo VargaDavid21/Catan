@@ -1,10 +1,10 @@
 package com.company.Construction;
 
-import com.company.GodPackage.Player;
+import com.company.Engine.Player;
 
 public class City extends Construction{
-    public City(Player player, int cordX, int cordY) {
-        super(player, cordX, cordY, 2);
+    public City(Player player) {
+        super(player);
     }
 
 }

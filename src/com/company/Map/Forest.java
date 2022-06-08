@@ -4,16 +4,13 @@ import com.company.Resource.Resource;
 import com.company.Resource.Wood;
 
 public class Forest extends OperationalTile{
-    private Resource resource = new Wood();
+    private static Resource resource = new Wood();
 
-    @Override
-    public Resource getResource() {
-        return resource;
+    public Forest() {
+        super(resource);
     }
-
-
     @Override
     public String toString() {
-        return super.toString() + "F - " + getResource();
+        return "F - " + getResource();
     }
 }

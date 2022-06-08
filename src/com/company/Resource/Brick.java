@@ -1,12 +1,14 @@
 package com.company.Resource;
 
-public class Stone extends Resource {
+public class Brick extends Resource {
+
     @Override
     public String getName() {
-        return "Stone";
+        return "Brick";
     }
+
     @Override
     public String toString() {
-        return "St";
+        return "Br";
     }
 }

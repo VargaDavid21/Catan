@@ -1,10 +1,15 @@
 package com.company;
 
-import com.company.Map.Map;
+import com.company.Engine.Game;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        Game game = new Game(3, 4, 10);
+
+        System.out.println(game);
+
        /* System.out.println(
                 "Menu:\n " +
                         "1. See your resources. \n " +

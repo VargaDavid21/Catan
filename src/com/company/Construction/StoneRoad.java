@@ -1,9 +1,9 @@
 package com.company.Construction;
 
-import com.company.GodPackage.Player;
+import com.company.Engine.Player;
 
 public class StoneRoad extends Construction{
-    public StoneRoad(Player player, int cordX, int cordY) {
-        super(player, cordX, cordY,2);
+    public StoneRoad(Player player) {
+        super(player);
     }
 }

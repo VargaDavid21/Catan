@@ -1,9 +1,9 @@
 package com.company.Construction;
 
-import com.company.GodPackage.Player;
+import com.company.Engine.Player;
 
 public class Village extends Construction{
-    public Village(Player player, int cordX, int cordY) {
-        super(player, cordX, cordY,1);
+    public Village(Player player) {
+        super(player);
     }
 }

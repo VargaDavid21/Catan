@@ -1,11 +1,13 @@
 package com.company.Construction;
 
-import com.company.GodPackage.Player;
+import com.company.Engine.Player;
 import com.company.Resource.Resource;
 
 import java.util.HashMap;
 
 public abstract class Construction {
+
+    public static final String[] CONSTRUCTION_TYPES = {"Village", "City", "Fortress", "MudRoad", "StoneRoad"};
     private int points;
     private int cordX;
     private int cordY;
@@ -13,7 +15,7 @@ public abstract class Construction {
     private Player player;
     private HashMap<Resource, Integer> cost;
 
-    public Construction(Player player, int cordX, int cordY, int points) {
+    public Construction(Player player) {
         this.player = player;
         this.cordX = cordX;
         this.cordY = cordY;

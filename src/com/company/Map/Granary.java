@@ -4,15 +4,13 @@ import com.company.Resource.Resource;
 import com.company.Resource.Wheat;
 
 public class Granary extends OperationalTile{
-    private Resource resource = new Wheat();
+    private static Resource resource = new Wheat();
 
-    @Override
-    public Resource getResource() {
-        return resource;
+    public Granary() {
+        super(resource);
     }
-
     @Override
     public String toString() {
-        return super.toString() + "G  - " + getResource();
+        return "G  - " + getResource();
     }
 }

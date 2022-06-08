@@ -1,33 +1,29 @@
 package com.company.Map;
 
-import com.company.Resource.Bricks;
 import com.company.Resource.Resource;
 
-public abstract class OperationalTile extends Tile{
+public abstract class OperationalTile extends Tile {
     private Resource resource;
     private int token;
 
-    public OperationalTile(int cordX, int cordY, Resource resource) {
-        super(cordX, cordY);
+    public OperationalTile(Resource resource) {
         this.resource = resource;
     }
 
-    public int getToken() {
-        int min = 2;
-        int max = 12;
-        return token = (int)(Math.random()*(max - min + 1) + min);
+    /*public static OperationalTile createOperationalTileFromStringResource(String resource) {
+        if(string not found in resource types din Resource) throw invalid argument..
+        switch(...)
+    }*/
+
+    public void setToken(int token) {
+        this.token = token;
     }
 
-    public OperationalTile() {
-        super();
+    public int getToken() {
+        return token;
     }
 
     public Resource getResource() {
         return resource;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + getToken() + " - ";
     }
 }
