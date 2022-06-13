@@ -4,7 +4,7 @@ import com.company.Resource.Resource;
 import com.company.Resource.Stone;
 
 public class StoneMine extends OperationalTile  {
-    private static Resource resource = new Stone();
+    private static String resource = "Stone";
 
     public StoneMine() {
         super(resource);
@@ -12,6 +12,6 @@ public class StoneMine extends OperationalTile  {
 
     @Override
     public String toString() {
-        return "StY - " + getResource();
+        return super.toString() + "StY - " + getToken();
     }
 }

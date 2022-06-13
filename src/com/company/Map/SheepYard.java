@@ -1,11 +1,7 @@
 package com.company.Map;
 
-import com.company.Resource.Resource;
-import com.company.Resource.Sheep;
-import com.company.Resource.Stone;
-
 public class SheepYard extends OperationalTile {
-    private static Resource resource = new Sheep();
+    private static String resource = "Sheep";
 
     public SheepYard() {
         super(resource);
@@ -13,6 +9,6 @@ public class SheepYard extends OperationalTile {
 
     @Override
     public String toString() {
-        return "ShY - " + getResource();
+        return super.toString() + "ShY - " + getToken();
     }
 }

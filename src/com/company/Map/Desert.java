@@ -4,6 +4,6 @@ public class Desert extends Tile{
 
     @Override
     public String toString() {
-        return super.toString() + "D";
+        return super.toString() + "D - X";
     }
 }

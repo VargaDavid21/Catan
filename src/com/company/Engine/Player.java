@@ -1,14 +1,13 @@
 package com.company.Engine;
 
 import com.company.Construction.Construction;
+import com.company.Map.OperationalTile;
 import com.company.Resource.Resource;
 
 import java.util.*;
 
 public class Player {
-
     public static final String[] PLAYER_COLORS = {"Blue", "Red", "Green", "Yellow", "Purple", "Orange", "Cyan", "Brown"};
-
     private static int nrOfPlayer = 0;
 
     private int id;
@@ -16,10 +15,19 @@ public class Player {
     private String color;
     private LinkedHashMap<String, Integer> resources;
     private LinkedHashMap<String, Integer> constructions;
+    private int winningPoints;
 
-    //private void addResources(HashMap...)
-    //private void removeResources(HashMap...)
-    //private void addConstructions(HashMap...)
+    public void addResource(String resource, int howMany) {
+        if (howMany < 0) throw new IllegalArgumentException("Cannot add 0 or lower resources. ");
+        resources.replace(resource, howMany + resources.get(resource));
+    }
+
+    public void removeResource(String resource, int howMany) {
+        if (howMany <= 0) throw new IllegalArgumentException("Cannot remove 0 or lower resources. ");
+        int aux = resources.get(resource) - howMany;
+        if (aux < 0) { throw new IllegalArgumentException("Not enough resources of this type. "); }
+        resources.replace(resource, aux);
+    }
 
     public Player(String name, String color) {
         this.name = name;
@@ -46,8 +54,13 @@ public class Player {
     public LinkedHashMap<String, Integer> getResources() {
         return resources;
     }
+
     public LinkedHashMap<String, Integer> getConstruction() {
         return constructions;
+    }
+
+    public void addConstructions(String construction) {
+        constructions.replace(construction, constructions.get(construction) + 1);
     }
 
     @Override

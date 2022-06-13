@@ -4,7 +4,7 @@ import com.company.Resource.Brick;
 import com.company.Resource.Resource;
 
 public class ClayPit extends OperationalTile{
-    private static Resource resource = new Brick();
+    private static String resource = "Brick";
 
     public ClayPit() {
         super(resource);
@@ -12,6 +12,6 @@ public class ClayPit extends OperationalTile{
 
   @Override
     public String toString() {
-        return "CP - " + getResource();
+        return super.toString() + "CP - " + getToken();
     }
 }
